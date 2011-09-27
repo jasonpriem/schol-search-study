@@ -130,10 +130,13 @@ function lemurlog_Help(event)
 // added by Jason Priem, 27 Sept. 2011
 ///////////////////////////////////////////////////////////////////////
 function lemurlog_Upvote(event) {
-    button = document.getElementById("LogTB-Upvote-Button");
+    var button = document.getElementById("LogTB-Upvote-Button");
     button.className = "clicked";
+    button.label = "Saved.";
     
     // log the event in the log file.
+    
+    setTimeout("b=document.getElementById('LogTB-Upvote-Button');\nb.className='';\nb.label=''", 750)
 }
 
 ///////////////////////////////////////////////////////////////////////

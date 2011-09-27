@@ -61,8 +61,13 @@
 
 #LogTB-Upvote-Button {
     list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu-gray.png");
-  -moz-image-region: rect(0 32px 16px 16px);  
-  -moz-box-orient: horizontal;
+    -moz-image-region: rect(0 32px 16px 16px);  
+    -moz-appearance: none;
+    margin:0 !important;
+    padding:0 !important;
+    min-width: 0 !important;
+    width:16px !important;
+    color:green;
 }
 
 #LogTB-Upvote-Button.clicked {

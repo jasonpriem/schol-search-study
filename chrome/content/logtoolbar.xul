@@ -18,8 +18,10 @@
   <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/logtoolbar.js" />
 
     <hbox id="urlbar-icons">
-        <image 
+        <button 
             id="LogTB-Upvote-Button" 
+            label=""
+            width="20"
             tooltiptext="Mark this page as relevant to your search"
             onclick="lemurlog_Upvote(event)"
             />   
