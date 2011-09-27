@@ -135,6 +135,7 @@ function lemurlog_Upvote(event) {
     button.label = "Saved.";
     
     // log the event in the log file.
+    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "upvote\t" + new Date().getTime());
     
     setTimeout("b=document.getElementById('LogTB-Upvote-Button');\nb.className='';\nb.label=''", 750)
 }
