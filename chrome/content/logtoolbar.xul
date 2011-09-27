@@ -25,7 +25,7 @@
         oncommand="lemurlog_Upvote(event)"
         />  
 </hbox>
-<toolbox id="navigator-toolbox">
+<!--  <toolbox id="navigator-toolbox">
 
     <toolbar 
       id="LogTB-Toolbar" 
@@ -112,7 +112,7 @@
       </toolbaritem>
       <toolbarspring />
     </toolbar>
-  </toolbox> 
+  </toolbox> -->
   
 </overlay>
 
