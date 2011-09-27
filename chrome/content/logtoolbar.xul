@@ -21,9 +21,8 @@
         <image 
             id="LogTB-Upvote-Button" 
             tooltiptext="Mark this page as relevant to your search"
-            class="urlbar-icon" 
-            oncommand="lemurlog_Upvote(event)"
-            />  
+            onclick="lemurlog_Upvote(event)"
+            />   
     </hbox>
     <menupopup id="menu_ToolsPopup">
         <menu id="LogTB-ToolsMenu" label="QueryLog Toolbar">

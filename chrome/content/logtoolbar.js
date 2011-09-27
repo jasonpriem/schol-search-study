@@ -126,6 +126,17 @@ function lemurlog_Help(event)
 }
 
 ///////////////////////////////////////////////////////////////////////
+// upvote handler
+// added by Jason Priem, 27 Sept. 2011
+///////////////////////////////////////////////////////////////////////
+function lemurlog_Upvote(event) {
+    button = document.getElementById("LogTB-Upvote-Button");
+    button.className = "clicked";
+    
+    // log the event in the log file.
+}
+
+///////////////////////////////////////////////////////////////////////
 // 'keyup' event handler
 ///////////////////////////////////////////////////////////////////////
 function lemurlog_OnKeyUp(event)
@@ -174,6 +185,8 @@ function lemurlog_OnKeyUp(event)
 
   lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "CtrlC\t" + time +"\t"+ text.length +"\t" + text +"\n");
 } 
+
+
 
 ///////////////////////////////////////////////////////////////////////
 // 'keydown' event handler

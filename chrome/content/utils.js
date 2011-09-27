@@ -126,6 +126,9 @@ function lemurlog_IsRecordableURL(url)
 function lemurlog_SetButtons()
 {
   try {
+    var upvoteButton = document.getElementById("LogTB-Upvote-Button");
+    upvoteButton.className = "";
+      
     var button = document.getElementById("LogTB-Pause-Button");
     button.collapsed = (!lemurlog_g_enable);
     button.disabled = (!lemurlog_g_enable);
