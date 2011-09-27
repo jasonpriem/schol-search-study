@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<dialog 
+  id="LogTB-Upload-Dialog"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+  title="[Lemur Query Log Toolbar] - Upload log files"
+  buttons="accept, cancel"
+  onload="lemurlog_up_onLoad();"
+  ondialogaccept="return lemurlog_up_onAccept();"
+  ondialogcancel="return lemurlog_up_onCancel();"
+  onclose="return lemurlog_up_onCancel();"
+>
+
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/aescipher.js"/>
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/configuration.js"/>
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/utils.js"/>
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/service.js"/>
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/upload.js"/>
+
+  <vbox id="LogTB-Text-Container" flex="1">
+    <description id="LogTB-Up-Desc0" value=""></description>
+    <separator/>
+    <description id="LogTB-Up-Desc1" value=""></description>
+    <description id="LogTB-Up-Desc2" value=""></description>
+  </vbox>
+
+  <separator/>
+
+  <vbox id="LogTB-Meter-Container" flex="1">
+    <progressmeter id="LogTB-Meter" mode="undetermined" value="0%"></progressmeter>
+  </vbox>
+
+  <separator/>
+
+  <vbox id="LogTB-Result-Container" flex="1">
+    <description id="LogTB-Up-Result" value=""></description>
+  </vbox>
+
+</dialog>

@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<dialog 
+  id="dlgToolbarSettings"
+  title="Query Log Toolbar - Settings"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  buttons="accept,cancel,extra1"
+  ondialogaccept="return lemurlogtoolbar_saveSettings();"
+  ondialogcancel="return true;"
+  buttonlabelextra1="Apply"
+  ondialogextra1="lemurlogtoolbar_saveSettings();"
+  
+>
+
+<script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/aescipher.js"/>
+<script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/configuration.js" />
+<script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/settings.js" />
+
+<tabbox id="tbSettings">
+  <tabs>
+    <tab label="General" />
+    <tab label="Blacklists" />
+    <tab label="Search Engines" />
+  </tabs>
+  <tabpanels>
+  
+    <tabpanel id="tabSettingsGeneral">
+      <vbox>
+        <groupbox>
+          <caption label="General Settings" />
+          <vbox>
+            <checkbox id="chkAnonSession" label="Generate random session ID" />
+            <checkbox id="chkUseDesktopSearch" label="Log Desktop Search Results" />
+          </vbox>
+        </groupbox>
+        <groupbox>
+          <caption label="Server Settings" />
+          <vbox>
+            <hbox>
+              <label value="Address:" control="txtServer" />
+              <textbox id="txtServer" value="" size="48" onchange="lemurlogtoolbar_txtServerOnChange();" />
+            </hbox>
+            <groupbox>
+              <caption id="lblAutoUploads" label="Automatic Uploads" />
+              <radiogroup id="rdoGroupAutoUploads">
+                <vbox>
+                  <hbox>
+                    <radio id="btnAllowAutoUploads" label="Allow automatic uploads" />
+                    <radio id="btnManualUploadsOnly" label="Manual uploads only" />
+                  </hbox>
+                  <radio id="btnAutoUploadsWithAsk" label="Allow automatic uploads, but ask first" />
+                </vbox>
+              </radiogroup>
+            </groupbox>
+          </vbox>
+        </groupbox>
+        <groupbox>
+          <caption label="Blacklist Settings" />
+          <vbox>
+            <checkbox id="chkPersonalData" oncommand="lemurlogtoolbar_chkPersonalDataOnChange();" label="Blacklist Personal Data (CC#'s, phone, Etc.)" checked="true" />
+            <checkbox id="chkAddressData" oncommand="lemurlogtoolbar_chkAddressDataOnChange();"  label="Blacklist Address Data" checked="true" />
+            <checkbox id="chkProperNameData" oncommand="lemurlogtoolbar_chkProperNameDataOnChange();"  label="Blacklist Proper Names" checked="true" />
+            <checkbox id="chkKeywordData" oncommand="lemurlogtoolbar_chkKeywordDataOnChange();"  label="Blacklist Keywords" checked="true" />
+            <label value="Note: the above blacklist items will not be" />
+            <label value="effective unless the blacklist entries on the" />
+            <label value="Blacklists tab are set." />
+          </vbox>
+        </groupbox>
+      </vbox>
+    </tabpanel>
+    
+    <tabpanel id="tabSettingsBlacklist">
+      <vbox>
+        <hbox>
+          <label value="Blacklists:" control="drpBlacklists" />
+          <menulist id="drpBlacklists" oncommand="lemurlogtoolbar_drpBlacklists_OnSelect();">
+            <menupopup>
+              <menuitem label="Personal Data" selected="true" />
+              <menuitem label="Address Data" />
+              <menuitem label="Proper Names" />
+              <menuitem label="Keywords" />
+            </menupopup>
+          </menulist>
+        </hbox>
+        <vbox>
+          <label id="lblBlacklistGroup" value="Personal Data" />
+          <tabbox id="tbBlacklists" selectedIndex="1">
+            <tabpanels id="tbBlacklistPanels">
+              <tabpanel id="tabBlacklistPersonal" style="border: none;">
+                <vbox>
+                  <label value="Personal data such as SSNs, credit card information," width="300" />
+                  <label value="driver's license numbers, etc. should be entered here" width="300" />
+                  <listbox id="lstBlacklistPersonalData" seltype="single" onselect="lemurlogtoolbar_doListItemSelection();" />
+                  <button id="btnAddSpecialPersonal" label="Add Special Information" oncommand="lemurlogtoolbar_btnAddSpecialPersonalOnClick();" />
+                </vbox>
+              </tabpanel>
+              <tabpanel id="tabBlacklistAddress" style="border: none;">
+                <vbox>
+                  <label value="Any addresses to filter should be entered here" width="300" />
+                  <label value="" width="300" />
+                  <listbox id="lstBlacklistAddressData" seltype="single" onselect="lemurlogtoolbar_doListItemSelection();" />
+                </vbox>
+              </tabpanel>
+              <tabpanel id="tabBlacklistNames" style="border: none;">
+                <vbox>
+                  <label value="Proper names such as people or businesses should be" width="300" />
+                  <label value="entered here" width="300" />
+                  <listbox id="lstBlacklistNameData" seltype="single" onselect="lemurlogtoolbar_doListItemSelection();" />
+                </vbox>
+              </tabpanel>
+              <tabpanel id="tabBlacklistKeywords" style="border: none;">
+                <vbox>
+                  <label value="Any additional keywords to be filtered should be" width="300" />
+                  <label value="entered here" width="300" />
+                  <listbox id="lstBlacklistKeywordData" seltype="single" onselect="lemurlogtoolbar_doListItemSelection();" />
+                </vbox>
+              </tabpanel>
+            </tabpanels>
+          </tabbox>
+        </vbox>
+        <hbox>
+          <button id="btnRemoveListItem" align="end" label="Remove Selected" disabled="true" oncommand="lemurlogtoolbar_btnRemoveListItemOnClick();" />
+        </hbox>
+        <hbox>
+          <label value="New item:" control="txtNewListItem" />
+          <textbox id="txtNewListItem" />
+          <button id="btnAddListItem" align="end" label="Add" oncommand="lemurlogtoolbar_btnAddListItemOnClick();" />
+        </hbox>
+      </vbox>
+    </tabpanel>
+  
+    <tabpanel id="tabSearchEngines">
+      <vbox>
+        <label id="lblSearchEnginesList" value="Known Search Engines:" />
+        <listbox id="lstSearchEngines" seltype="single" onselect="lemurlogtoolbar_doSEListItemSelection();"  />
+        <hbox>
+          <button id="btnRemoveSEListItem" align="end" label="Remove Selected" disabled="true" oncommand="lemurlogtoolbar_btnRemoveSEListItemOnClick();" />
+        </hbox>
+        <hbox>
+          <label value="New item:" control="txtNewSEListItem" />
+          <textbox id="txtNewSEListItem" />
+          <button id="btnAddSEListItem" align="end" label="Add" oncommand="lemurlogtoolbar_btnAddSEListItemOnClick();" />
+        </hbox>
+        <label value="Note: to add a new search engine to the list" />
+        <label value="of search engines the system will log results" />
+        <label value="for, use the beginning of the search URL for" />
+        <label value="the engine (i.e. http://www.google.com/search?)" />
+      </vbox>
+    </tabpanel>
+  
+  </tabpanels>
+</tabbox>
+
+<script>
+
+  // on load - ensure we have the proper settings
+  
+  lemurlogtoolbar_setOptionsSettings();
+  
+</script>
+
+</dialog>

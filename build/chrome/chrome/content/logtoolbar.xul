@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet 
+  href="chrome://lemurlogtoolbar/skin/lemurlogtoolbar.css"
+  type="text/css" 
+?>
+
+<overlay 
+  id="LogTB-Overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+>
+
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/aescipher.js"/>
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/configuration.js" />
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/utils.js" />
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/service.js" />
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/privateBrowserListener.js"/>
+  <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/logtoolbar.js" />
+
+  <toolbox id="navigator-toolbox">
+
+    <toolbar 
+      id="LogTB-Toolbar" 
+      toolbarname="Lemur Query Log Toolbar" 
+      accesskey="L" 
+      class="chromeclass-toolbar" 
+      context="toolbar-context-menu" 
+      hidden="false" 
+      persist="hidden"
+    >
+      <toolbaritem flex="0">
+        <toolbarseparator />
+        <toolbarbutton 
+          id="LogTB-Start-Button" 
+          tooltiptext="Start Logging"
+          label="Start" 
+          oncommand="lemurlog_Switch(event, true)"
+        />
+        <toolbarbutton 
+          id="LogTB-Start-Button-Gray" 
+          tooltiptext="Start Logging"
+          label="Start"
+          oncommand="lemurlog_Switch(event, true)"
+        />
+        <toolbarbutton 
+          id="LogTB-Pause-Button"
+          tooltiptext="Pause logging"
+          label="Pause" 
+          oncommand="lemurlog_Switch(event, false)" 
+        />
+        <toolbarbutton 
+          id="LogTB-Pause-Button-Gray" 
+          tooltiptext="Pause logging"
+          label="Pause" 
+          oncommand="lemurlog_Switch(event, false)" 
+        />
+        <toolbarbutton
+          id="LogTB-View-Button"
+          type="menu"
+          label="View  "
+          tooltiptext="View log files"
+        >
+          <menupopup>
+            <menuitem
+              label="Activity log"
+              tooltiptext="View activity log"
+              oncommand="lemurlog_View_Log(event, 0)" 
+            />
+            <menuitem
+              label="Search log"
+              tooltiptext="View search log"
+              oncommand="lemurlog_View_Log(event, 1)" 
+            />
+          </menupopup>
+        </toolbarbutton>
+        <toolbarbutton 
+          id="LogTB-Clear-Button" 
+          tooltiptext="Clear all log files"
+          label="Clear"
+          oncommand="lemurlog_Clear_Log(event)" 
+        />
+        <toolbarbutton 
+          id="LogTB-Upload-Button" 
+          tooltiptext="Upload log files"
+          label="Upload" 
+          oncommand="lemurlog_Upload_Log(event)" 
+        />
+        <toolbarbutton 
+          id="LogTB-Settings-Button" 
+          tooltiptext="Settings Options"
+          label="Settings"
+          oncommand="lemurlog_showsettings(event)"
+        />
+        <toolbarbutton 
+          id="LogTB-Help-Button" 
+          tooltiptext="Help information"
+          label="Help" 
+          oncommand="lemurlog_Help(event)" 
+        />
+      </toolbaritem>
+      <toolbarspring />
+    </toolbar>
+  </toolbox>
+</overlay>
+

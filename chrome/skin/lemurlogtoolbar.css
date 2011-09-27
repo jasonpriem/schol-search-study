@@ -1,0 +1,66 @@
+
+#LogTB-Start-Button {
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
+  -moz-image-region: rect(48px 96px 64px 80px);  
+  -moz-box-orient: horizontal;
+
+}
+#LogTB-Pause-Button {
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
+  -moz-image-region: rect(48px 112px 64px 96px);  
+  -moz-box-orient: horizontal;
+}
+
+#LogTB-Start-Button-Gray {
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu-gray.png");
+  -moz-image-region: rect(48px 96px 64px 80px);  
+  -moz-box-orient: horizontal;
+
+}
+#LogTB-Pause-Button-Gray {
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu-gray.png");
+  -moz-image-region: rect(48px 112px 64px 96px);  
+  -moz-box-orient: horizontal;
+}
+
+#LogTB-View-Button {
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
+  -moz-image-region: rect(48px 16px 64px 0px);  
+  -moz-box-orient: horizontal;
+}
+
+#LogTB-Clear-Button {
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
+  -moz-image-region: rect(0px 48px 16px 32px);  
+  -moz-box-orient: horizontal;
+}
+
+#LogTB-Upload-Button {
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
+  -moz-image-region: rect(224px 32px 240px 16px);  
+  -moz-box-orient: horizontal;
+}
+
+#LogTB-Settings-Button {
+  list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
+  -moz-image-region: rect(272px 48px 288px 32px);  
+  -moz-box-orient: horizontal;
+}
+
+#LogTB-Help-Button {
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
+  -moz-image-region: rect(32px 144px 48px 128px);  
+  -moz-box-orient: horizontal;
+}
+
+#LogTB-Cancel-Upload-Button {
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
+  -moz-image-region: rect(48px 64px 64px 48px);  
+  -moz-box-orient: horizontal;
+}
+
+#LogTB-Upvote-Button {
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
+  -moz-image-region: rect(0 32px 16px 16px);  
+  -moz-box-orient: horizontal;
+}

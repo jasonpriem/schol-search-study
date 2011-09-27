@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<dialog 
+  id="LogTB-Scrubbing-Dialog"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+  title="Query Log Toolbar - Scrubbing log files"
+  buttons="cancel"
+  ondialogcancel="return true;"
+  onclose="return true;"
+>
+  <vbox>
+    <label id="lblScrubbing" value="Scrubbing: " />
+    <progressmeter id="pbrScrubbingProgress" mode="determined" value="0%" />
+  </vbox>
+
+</dialog>

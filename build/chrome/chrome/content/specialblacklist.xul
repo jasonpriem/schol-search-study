@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<dialog 
+  id="dlgSpecialBlacklist"
+  title="Query Log Toolbar - Special Blacklist Items"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  buttons="cancel"
+  ondialogcancel="return true;"
+  buttonlabelcancel="Close"
+>
+
+<script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/configuration.js" />
+<script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/settings.js" />
+<script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/specialblacklist.js" />
+
+<groupbox>
+  <caption label="Personal Information Fields" />
+  <grid flex="1">
+    <rows>
+      <row />
+      <row />
+      <row />
+      <row />
+      <row />
+    </rows>
+    
+    <columns>
+      <column>
+        <label value="Phone Number" control="txtPhoneNumber" />
+        <label value="Credit Card" control="txtCreditCard" />
+        <label value="Social Security #" control="txtSSN" />
+        <label value="Driver's License" control="txtDriversLic" />
+      </column>
+      <column flex="1">
+        <textbox id="txtPhoneNumber" value="" size="20" />
+        <textbox id="txtCreditCard" value="" size="20" />
+        <textbox id="txtSSN" value="" size="20" />
+        <textbox id="txtDriversLic" value="" size="20" />
+      </column>
+      <column>
+        <button label="Add" oncommand="lemurlogtoolbar_btnAddPhoneOnClick();" />
+        <button label="Add" oncommand="lemurlogtoolbar_btnAddCCOnClick();" />
+        <button label="Add" oncommand="lemurlogtoolbar_btnAddSSNOnClick();" />
+        <button label="Add" oncommand="lemurlogtoolbar_btnAddDriversOnClick();" />
+      </column>
+    </columns>
+  </grid>
+</groupbox>
+
+</dialog>

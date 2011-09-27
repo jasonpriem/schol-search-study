@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="rdf:#$nmAoG"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="1.6"
+                   em:maxVersion="6.*" />
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="logtoolbar@lemurproject.org"
+                   em:name="Lemur Project Logging Toolbar"
+                   em:version="2.1.0"
+                   em:creator="Lemur Project"
+                   em:description="A toolbar logging user behavior"
+                   em:homepageURL="http://www.lemurproject.org/querylogtoolbar/"
+                   em:updateURL="http://lemur.sourceforge.net/querylogtoolbar/update.rdf"
+                   em:updateKey="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCXAyFa8jPvPrhIllr6zdBaQcOcLaCO9pNs0m4VUeV9clWL801EiHkaABbVvy11niRXZPiHyDJrp9CKkPO0sZ8V+YkY6D0hyzAlsAiK7WXSPqMOxRBK9eRd2g5LQ0byGh4+kNHDQzvbYVTrnU5E/s1DMMhKKO8b0/Ay+5Hajm2ydwIDAQAB">
+    <em:targetApplication RDF:resource="rdf:#$nmAoG"/>
+  </RDF:Description>
+</RDF:RDF>

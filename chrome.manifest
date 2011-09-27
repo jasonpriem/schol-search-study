@@ -1,0 +1,4 @@
+content lemurlogtoolbar chrome/content/
+overlay chrome://browser/content/browser.xul chrome://lemurlogtoolbar/content/logtoolbar.xul
+skin lemurlogtoolbar classic/1.0 chrome/skin/
+
