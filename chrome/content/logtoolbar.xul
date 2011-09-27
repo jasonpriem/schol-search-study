@@ -17,14 +17,33 @@
   <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/privateBrowserListener.js"/>
   <script type="application/x-javascript" src="chrome://lemurlogtoolbar/content/logtoolbar.js" />
 
-<hbox id="urlbar-icons">
-    <image 
-        id="LogTB-Upvote-Button" 
-        tooltiptext="Mark this page as relevant to your search"
-        class="urlbar-icon" 
-        oncommand="lemurlog_Upvote(event)"
-        />  
-</hbox>
+    <hbox id="urlbar-icons">
+        <image 
+            id="LogTB-Upvote-Button" 
+            tooltiptext="Mark this page as relevant to your search"
+            class="urlbar-icon" 
+            oncommand="lemurlog_Upvote(event)"
+            />  
+    </hbox>
+    <menupopup id="menu_ToolsPopup">
+        <menu id="LogTB-ToolsMenu" label="QueryLog Toolbar">
+            <menupopup>
+                <menuitem
+                  label="View Activity log"
+                  tooltiptext="View activity log"
+                  oncommand="lemurlog_View_Log(event, 0)" 
+                />
+                <menuitem
+                  label="View search log"
+                  tooltiptext="View search log"
+                  oncommand="lemurlog_View_Log(event, 1)" 
+                />
+            </menupopup>
+        </menu>
+    </menupopup>
+    
+    
+    
 <!--  <toolbox id="navigator-toolbox">
 
     <toolbar 

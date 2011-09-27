@@ -60,7 +60,7 @@
 }
 
 #LogTB-Upvote-Button {
-    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
+    list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu-gray.png");
   -moz-image-region: rect(0 32px 16px 16px);  
   -moz-box-orient: horizontal;
 }
