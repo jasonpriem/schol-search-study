@@ -24,5 +24,5 @@ pref("extensions.lemurquerylog.bl.addressrx", "");
 pref("extensions.lemurquerylog.bl.propernamerx", "");
 pref("extensions.lemurquerylog.bl.keywordrx", "");
 
-pref("extensions.lemurquerylog.searchengines", "http://www.google.com/search?\nhttp://search.live.com/results.aspx?\nhttp://search.msn.com/results.aspx?\nhttp://www.bing.com/search?\nhttp://search.yahoo.com/search?\nhttp://www.sogou.com/soho?\nhttp://search.yahoo.com/search;");
+pref("extensions.lemurquerylog.searchengines", "http://scholar.google.com/scholar?\nhttp://www.ncbi.nlm.nih.gov/pubmed?\nhttp://www.ncbi.nlm.nih.gov/pmc/?\nhttp://academic.research.microsoft.com/Search?");
 
