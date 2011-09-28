@@ -134,7 +134,7 @@ function lemurlog_Upvote(event) {
     button.className = "clicked";
     button.label = "Saved.";
     var currentUrl = window.top.getBrowser().selectedBrowser.contentWindow.location.href;
-//    currentUrl = lemurlogtoolbar_washAndRinse(lemurlog_TrimString(browser.currentURI))
+    currentUrl = lemurlogtoolbar_washAndRinse(lemurlog_TrimString(currentUrl))
     
     // log the event in the log file.
     lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "upvote\t" + new Date().getTime() + "\t"+ currentUrl +"\n");
@@ -238,9 +238,14 @@ function lemurlog_OnMouseDown(event)
   {
     return;
   }
-  var time = new Date().getTime();
-  url = lemurlogtoolbar_washAndRinse(lemurlog_TrimString(url));
+  
+  var currentLoc = window.top.getBrowser().selectedBrowser.contentWindow.location.href;
+  if (!lemurlog_IsSearchURL(currentLoc)) {
+      return;
+  }
+  
 
+  var time = new Date().getTime();
   while (Application.storage.get("lemurlog_clickLock", false))
   {
 	//sleep(1);
