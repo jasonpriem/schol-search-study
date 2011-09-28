@@ -239,6 +239,8 @@ function lemurlog_OnMouseDown(event)
     return;
   }
   
+  // added by Jason Priem
+  // clicks are only recorded if the user is on a search page.
   var currentLoc = window.top.getBrowser().selectedBrowser.contentWindow.location.href;
   if (!lemurlog_IsSearchURL(currentLoc)) {
       return;
