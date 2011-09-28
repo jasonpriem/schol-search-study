@@ -1,5 +1,7 @@
 This is a fork of the [Lemur Query Log Toolbar](http://www.lemurproject.org/querylogtoolbar/)
 
+To install, click the "Downloads" button above, download `lemurlogtoolbar.xpi`, and then drag it into Firefox.
+
 main modifications
 ------------------
 

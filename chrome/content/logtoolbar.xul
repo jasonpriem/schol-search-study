@@ -30,7 +30,7 @@
         <menu id="LogTB-ToolsMenu" label="QueryLog Toolbar">
             <menupopup>
                 <menuitem
-                  label="View Activity log"
+                  label="View activity log"
                   tooltiptext="View activity log"
                   oncommand="lemurlog_View_Log(event, 0)" 
                 />
