@@ -133,9 +133,11 @@ function lemurlog_Upvote(event) {
     var button = document.getElementById("LogTB-Upvote-Button");
     button.className = "clicked";
     button.label = "Saved.";
+    var currentUrl = window.top.getBrowser().selectedBrowser.contentWindow.location.href;
+//    currentUrl = lemurlogtoolbar_washAndRinse(lemurlog_TrimString(browser.currentURI))
     
     // log the event in the log file.
-    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "upvote\t" + new Date().getTime() + "\n");
+    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "upvote\t" + new Date().getTime() + "\t"+ currentUrl +"\n");
     
     setTimeout("b=document.getElementById('LogTB-Upvote-Button');\nb.className='';\nb.label=''", 750)
 }
