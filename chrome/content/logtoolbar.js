@@ -135,7 +135,7 @@ function lemurlog_Upvote(event) {
     button.label = "Saved.";
     
     // log the event in the log file.
-    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "upvote\t" + new Date().getTime());
+    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "upvote\t" + new Date().getTime() + "\n");
     
     setTimeout("b=document.getElementById('LogTB-Upvote-Button');\nb.className='';\nb.label=''", 750)
 }
@@ -363,7 +363,7 @@ function lemurlog_OnTabRemoved_15(event)
   { 
     var time = new Date().getTime();
 	var id = browser.parentNode.id;
-    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "RmTab\t" + time + "\t" + id + "\n");
+//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "RmTab\t" + time + "\t" + id + "\n");
   }
 }
 
@@ -383,7 +383,7 @@ function lemurlog_OnTabSelected_15(event)
     var time = new Date().getTime();
     url=lemurlogtoolbar_washAndRinse(url, true);
 	var id = event.selectedTab.linkedBrowser.parentNode.id;
-    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "SelTab\t" + time + "\t" + id + "\t" + url + "\n");
+//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "SelTab\t" + time + "\t" + id + "\t" + url + "\n");
   }
 }
 
@@ -453,7 +453,7 @@ function lemurlog_OnTabRemoved_20(event)
   }
   var time = new Date().getTime();
   var id = event.target.linkedBrowser.parentNode.id;
-  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "RmTab\t" + time + "\t" + id + "\n");
+//  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "RmTab\t" + time + "\t" + id + "\n");
 }
 
 
@@ -478,7 +478,7 @@ function lemurlog_OnTabSelected_20(event)
     var time = new Date().getTime();
 	var id = browser.linkedBrowser.parentNode.id;
     url=lemurlogtoolbar_washAndRinse(url, true);
-    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "SelTab\t" + time + "\t" + id + "\t" + url + "\n");
+//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "SelTab\t" + time + "\t" + id + "\t" + url + "\n");
   }
 }
 
@@ -526,7 +526,7 @@ function lemurlog_OnFocus(event)
 	
     url=lemurlogtoolbar_washAndRinse(url, true);
 	var id = gBrowser.selectedBrowser.parentNode.id;
-    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Focus\t" + time + "\t" + id + "\t" + url + "\n");
+//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Focus\t" + time + "\t" + id + "\t" + url + "\n");
   }
 
 }
@@ -549,7 +549,7 @@ function lemurlog_OnBlur(event)
     return;
   }
   lemurlog_prev_blur_time = time;
-  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Blur\t" + time + "\n");
+//  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Blur\t" + time + "\n");
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -685,7 +685,7 @@ function lemurlog_OnShow(event)
   lemurlog_prev_show_time = time;
   url=lemurlogtoolbar_washAndRinse(url, true);
   var id = gBrowser.selectedBrowser.parentNode.id;
-  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Show\t" + time + "\t" + id + "\t" + url + "\n");
+//  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Show\t" + time + "\t" + id + "\t" + url + "\n");
 
 }
 
@@ -705,7 +705,7 @@ function lemurlog_OnHide(event)
     return;
   }
   lemurlog_prev_hide_time = time;
-  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Hide\t" + time + "\n");
+//  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Hide\t" + time + "\n");
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -757,7 +757,7 @@ function lemurlog_OnLoad_Cap(event)
     }
     var time = new Date().getTime();
     var printableurl=lemurlogtoolbar_washAndRinse(url, true);
-    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadCap\t" + time + "\t" + printableurl + "\n");
+//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadCap\t" + time + "\t" + printableurl + "\n");
 
     //add mousedown listeners to all links
 	/*
@@ -822,7 +822,7 @@ function lemurlog_OnLoad_Bub(event)
   if(lemurlog_IsRecordableURL(url))
   {
     url=lemurlogtoolbar_washAndRinse(url, true);
-    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadBub\t" + time + "\t" + url + "\n");
+//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadBub\t" + time + "\t" + url + "\n");
   }
 
 }
@@ -1031,25 +1031,12 @@ function lemurlog_AddTabEventListener()
 ///////////////////////////////////////////////////////////
 // Supported log records:
 ///////////////////////////////////////////////////////////
-// LoadCap
-// LoadBub
-
-// Show
-// Hide
-
-// Focus
-// Blur
-
-// AddTab
-// SelTab
-// RmTab
 
 // LClick: left click 
 // MClick: wheel click
 // RClick: right click
 
 // Scroll
-// Ctrol-C
 
 // Search
 // 
