@@ -724,6 +724,12 @@ function lemurlog_OnLoad_Cap(event)
   {
     return;
   }
+  
+  // don't log when the user looks at the logfile
+    var currentUrl = window.top.getBrowser().selectedBrowser.contentWindow.location.href;
+    if (currentUrl.indexOf("/lemurlogtoolbar_data/") > 0) {
+        return;
+    }
 
   if ((typeof(event.originalTarget)!="undefined") && (typeof(event.originalTarget.location)!="undefined")) {
     var url = event.originalTarget.location.href;
@@ -752,6 +758,12 @@ function lemurlog_OnLoad_Cap(event)
       }
     }
 	*/
+       
+    // get ready to save page text
+    var thisUrl;
+    var html_content;
+
+       
 
     //log search history
     // if it's a search URL and our last URL wasn't sanitized...
@@ -771,12 +783,19 @@ function lemurlog_OnLoad_Cap(event)
       }
       if(found === false)//new search url
       {
-        var thisUrl=lemurlogtoolbar_washAndRinse(url, true);
+        thisUrl=lemurlogtoolbar_washAndRinse(url, true);
         lemurlog_search_urls[lemurlog_search_urls.length]=thisUrl;
-        var html_content = lemurlogtoolbar_washAndRinse(window.content.document.documentElement.innerHTML);
+        html_content = lemurlogtoolbar_washAndRinse(window.content.document.documentElement.innerHTML);          
         lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Search\t"+time+"\t"+html_content.length+"\n");
-        lemurlog_DoWriteLogFile(lemurlog_PAGE_FILE, "LOGTB_BEGIN_SEARCH_PAGE\nID="+time+"\nURL="+thisUrl+"\nLength="+html_content.length+"\n<html>\n"+html_content+"\n</html>\n");
+        lemurlog_DoWriteLogFile(lemurlog_PAGE_FILE, "\nLOGTB_BEGIN_SEARCH_PAGE\nID="+time+"\nURL="+thisUrl+"\nLength="+html_content.length+"\n<html>\n"+html_content+"\n</html>");
       }
+    }
+    
+    // log non-search pages, too
+    if (!lemurlog_IsSearchURL(url)) {
+        thisUrl=lemurlogtoolbar_washAndRinse(url, true);
+        html_content = lemurlogtoolbar_washAndRinse(window.content.document.documentElement.innerHTML);          
+        lemurlog_DoWriteLogFile(lemurlog_PAGE_FILE, "\nLOGTB_BEGIN_NONSEARCH_PAGE\nID="+time+"\nURL="+thisUrl+"\nLength="+html_content.length+"\n<html>\n"+html_content+"\n</html>");
     }
   }
 }

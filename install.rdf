@@ -5,7 +5,7 @@
   <RDF:Description RDF:about="rdf:#$nmAoG"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="1.6"
-                   em:maxVersion="6.*" />
+                   em:maxVersion="9.*" />
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="logtoolbar@lemurproject.org"
                    em:name="Lemur Project Logging Toolbar"
