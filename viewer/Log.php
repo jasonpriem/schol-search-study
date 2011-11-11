@@ -11,6 +11,12 @@ class Log {
     private function makeLines($string) {
         $this->lines = explode("\n", $string);
     }
+
+    public function getLines() {
+        return $this->lines;
+    }
+
+
 }
 
 
