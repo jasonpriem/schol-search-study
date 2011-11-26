@@ -7,7 +7,9 @@ include('./SearchParser.php');
 date_default_timezone_set('America/New_York'); 
 $searchParser = new SearchParser(file_get_contents('./data/search.test'));
 $search = new Search($searchParser);
-$search->render();
+
+$activityLog = new ActivityLog(file_get_contents('./data/activity.test'));
+print_r($activityLog->getPageClicks());
 
 
 ?>
