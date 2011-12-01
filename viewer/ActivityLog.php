@@ -1,5 +1,12 @@
 <?php
 class ActivityLog extends Log {
+    private $queryRegexes = array(
+        "/http://google.com/\?/",
+        "/http://scholar.google.com/scholar\?/",
+        "/http://www.ncbi.nlm.nih.gov/pubmed\?/",
+        "/http://www.ncbi.nlm.nih.gov/pmc/\?/",
+        "/http://academic.research.microsoft.com/Search\?/"
+        );
 
     public function getPageClicks(){
         $pageClicks = array();
