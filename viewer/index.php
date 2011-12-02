@@ -1,5 +1,6 @@
 <?php
 include('./Log.php');
+include('./SerpFactory.php');
 include('./SearchLog.php');
 include('./ActivityLog.php');
 include('./Search.php');
@@ -10,7 +11,7 @@ date_default_timezone_set('America/New_York');
 
 $activityLog = new ActivityLog(file_get_contents('./data/activity.test'));
 $serpCollection = new SerpCollection();
-print_r($activityLog->parseSerps($serpCollection));
+print_r($activityLog->parseSerps(new SerpCollection() ));
 
 
 

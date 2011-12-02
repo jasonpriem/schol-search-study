@@ -31,7 +31,7 @@ class SerpCollection implements Iterator {
     public function addSerp(Serp $serp){
         $this->serps[] = $serp;
     }
-    private function getExtantSerpFromUrl($url){
+    public function getSerpByUrl($url){
         foreach ($this->serps as $k => &$thisSerp){
             if ($thisSerp->getUrl() === $url) {
                 return $thisSerp;
@@ -39,23 +39,15 @@ class SerpCollection implements Iterator {
         }
         return false;
     }
-    /**
-     * Gets or makes-then-gets a Serp object with a given URL field.
-     * If the Serp with the given URL is in the collection, this gets it;
-     *  otherwise, it makes a new one, adds the URL, adds it to the collection, then gets it.
-     *
-     * @param String $url
-     * @return Object a Serp object that has that URL
-     */
-    public function getSerpFromUrl($url){
-        if ($this->getExtantSerpFromUrl($url)) {
-            return $this->getExtantSerpFromUrl($url);
+
+    public function createSerpByUrl($url){
+        $serp = SerpFactory::make($url);
+        if ($serp) { // the SerpFactory didn't like the URL...must've been a non-search page
+            $this->addSerp($serp);
+            return $this->getSerpByUrl($url);
         }
         else {
-            $serp = new Serp();
-            $serp->setUrl($url);
-            $this->addSerp($serp);
-            return $this->getSerpFromUrl($url);
+            return false;
         }
     }
 }
