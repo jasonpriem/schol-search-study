@@ -3,19 +3,30 @@ class ActivityLog extends Log {
 
     public function parseSerps(SerpCollection $serpCollection){
         $lines = parent::getLinesArray();
+        $thisSerp = false;
         foreach ($lines as $k => $line) {
             $fields = explode("\t", $line);
-            if ($fields[0] == "Show") {
-                $url = $fields[3];
-                // the thisSerp object is passed by reference; we're working directly
-                // on the one in the serpCollection here.
+            preg_match('#https*://.+#', $line, $m);
+            $url = ( isset($m[0]) ) ? $m[0] : false; // annoyingly, url is in diff cols, depending on event type
+
+            if ($fields[0] == "Focus") {
+
+                // 1. try to get the serp from the collection.
                 $thisSerp = $serpCollection->getSerpByUrl($url);
+
+                // 2. if that didn't work, try to create a new Serp
                 if (!$thisSerp) {
                     $thisSerp = $serpCollection->createSerpByUrl($url);
                 }
-                if (!$thisSerp) continue; // this must be some random non-search URL.
+
+                // 3. if that didn't work, we're dealing with a non-search URL; move on.
+                if (!$thisSerp) continue; 
             }
-            // logic to add clicked urls to $thisSerp goes here
+            else if (in_array($fields[0], array('RClick', 'MClick', 'LClick'))){
+                if ($thisSerp) {
+                    $thisSerp->addClickedResult($url);
+                }
+            }
 
         }
         return $serpCollection;

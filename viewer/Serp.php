@@ -42,16 +42,12 @@ class Serp {
         $this->pageContent = $pageContent;
     }
 
-    public function setResultsClicked($resultsClicked) {
-        $this->resultsClicked = $resultsClicked;
-    }
-
-    public function addClickedResult($url){
-        $this->resultsClicked[] = $url;
-    }
-
     public function setSearchEngineName($searchEngineName) {
         $this->searchEngineName = $searchEngineName;
+    }
+
+     public function addClickedResult($url){
+        $this->resultsClicked[] = $url;
     }
 }
 ?>
