@@ -30,24 +30,41 @@ class SerpCollection implements Iterator {
     }
     public function addSerp(Serp $serp){
         $this->serps[] = $serp;
+        return end($this->serps);
     }
-    public function getSerpByUrl($url){
+    public function getSerpByUrl(ActivityLogEvent $event){
         foreach ($this->serps as $k => &$thisSerp){
-            if ($thisSerp->getUrl() === $url) {
+            if ($thisSerp->getUrl() === $event->getUrl()) {
                 return $thisSerp;
             }
         }
-        return false;
+        return null;
     }
 
-    public function createSerpByUrl($url){
-        $serp = SerpFactory::make($url);
-        if ($serp) { // the SerpFactory didn't like the URL...must've been a non-search page
-            $this->addSerp($serp);
-            return $this->getSerpByUrl($url);
+    public function createSerp(ActivityLogEvent $activityLogEvent){
+        $serp = SerpFactory::make($activityLogEvent);
+        return $this->addSerp($serp);
+    }
+
+    public function renderAsUl(){
+        echo "<ul>";
+        foreach ($this->serps as $k => $serp) {
+            $serp->render();
         }
-        else {
-            return false;
+        echo "</ul>";
+    }
+
+    public function fillFromActivityLog(ActivityLog $activityLog) {
+        foreach ($activityLog as $k => $event){
+            if ($event->isFocus() && $event->hasSearchUrl()) {
+                $serp = $this->getSerpByUrl($event); // get the serp if we've already saved it
+                if (!isset($serp)) {
+                    $serp = $this->createSerp($event); // make a new serp if we don't have this one yet
+                }
+            }
+            else if ($event->isClick()) {
+                $serp->addClickedResult($event->getUrl());
+            }
         }
     }
 }
