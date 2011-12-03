@@ -54,7 +54,7 @@ class Serp {
         echo ($this->searchEngineName == "Google") ? "" : "scholarly";
         echo "'>{$this->searchEngineName}</span>";
         echo "<span class='link-info'>";
-            echo "<span class='date'>".date("H:i, M j", $this->timestamp)."</span>";
+            echo "<span class='date'>".date("H:i, M j", $this->timestamp / 1000)."</span>";
             echo "<a href='$url'>$query</a>";
         echo "</span>";
         echo "<ul class='results-clicked'>";

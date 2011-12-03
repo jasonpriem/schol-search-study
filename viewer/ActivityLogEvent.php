@@ -3,11 +3,11 @@
 class ActivityLogEvent {
     private $str;
     private $queryRegexes = array(
-        "Google" =>     "#http://www\.google\.com/search\?q=([^&]+)#",
-        "gScholar" =>   "#http://scholar\.google\.com/scholar\?q=([^&]+)#",
-        "PubMed" =>     "#http://www\.ncbi\.nlm\.nih\.gov/pubmed\?.*?term=([^&]+)#",
-        "PMC" =>        "#http://www\.ncbi\.nlm\.nih\.gov/pmc\?.*?term=([^&]+)#",
-        "msAcademic"=>  "#http://academic.research.microsoft.com/Search\?query=([^&]+)#"
+        "Google" =>     "#https*://www\.google\.com/search\?q=([^&]+)#",
+        "gScholar" =>   "#https*://scholar\.google\.com.+?scholar\?q=([^&]+)#",
+        "PubMed" =>     "#https*://www\.ncbi\.nlm\.nih\.gov/pubmed\?.*?term=([^&]+)#",
+        "PMC" =>        "#https*://www\.ncbi\.nlm\.nih\.gov/pmc\?.*?term=([^&]+)#",
+        "msAcademic"=>  "#https*://academic.research.microsoft.com/Search\?query=([^&]+)#"
         );
     function __construct($str) {
         $this->str = $str;

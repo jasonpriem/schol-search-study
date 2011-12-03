@@ -6,7 +6,9 @@ include('./ActivityLogEvent.php');
 include('./ActivityLog.php');
 date_default_timezone_set('America/New_York'); 
 
-$activityLog = new ActivityLog(file_get_contents('./data/activity.test'));
+$activityLog = new ActivityLog(file_get_contents('./data/lemurlogtoolbar_log'));
+$activityLog = new ActivityLog(file_get_contents('./testdata/activity.test'));
+
 $serpCollection = new SerpCollection();
 $serpCollection->fillFromActivityLog($activityLog);
 

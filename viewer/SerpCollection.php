@@ -56,13 +56,18 @@ class SerpCollection implements Iterator {
 
     public function fillFromActivityLog(ActivityLog $activityLog) {
         foreach ($activityLog as $k => $event){
-            if ($event->isFocus() && $event->hasSearchUrl()) {
-                $serp = $this->getSerpByUrl($event); // get the serp if we've already saved it
-                if (!isset($serp)) {
-                    $serp = $this->createSerp($event); // make a new serp if we don't have this one yet
+            if ($event->isFocus()) {
+                if ($event->hasSearchUrl()) {
+                    $serp = $this->getSerpByUrl($event); // get the serp if we've already saved it
+                    if (!isset($serp)) {
+                        $serp = $this->createSerp($event); // make a new serp if we don't have this one yet
+                    }
+                }
+                else {
+                    $serp = null;
                 }
             }
-            else if ($event->isClick()) {
+            else if ($event->isClick() && isset($serp)) {
                 $serp->addClickedResult($event->getUrl());
             }
         }

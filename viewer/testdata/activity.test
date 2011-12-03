@@ -1250,3 +1250,29 @@ ScrollEnd	1320170221123	11455
 ScrollBegin	1320170250594		11456
 ScrollEnd	1320170250805	11513
 Blur	1320170251890
+Focus	1320246968131		https://www.google.com/search?q=unc+software+for+students+visio&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a
+LoadCap	1320246968771	https://www.google.com/search?q=unc+software+for+students+visio&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a
+Show	1320246968795		https://www.google.com/search?q=unc+software+for+students+visio&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a
+LClick	1320246973177	http://sils.unc.edu/it-services/software
+Hide	1320246973894
+Focus	1320246974520		http://sils.unc.edu/it-services/software
+LoadCap	1320246974568	http://sils.unc.edu/it-services/software
+Show	1320246974587		http://sils.unc.edu/it-services/software
+ScrollBegin	1320246981267		114
+ScrollEnd	1320246981377	228
+ScrollBegin	1320246982122		342
+ScrollEnd	1320246983135	798
+Blur	1320246985571
+LClick	1320246996472	http://sils.unc.edu/it-services/software/msdn
+Focus	1320246996486		http://sils.unc.edu/it-services/software
+Hide	1320246996726
+Focus	1321244287859		http://scholar.google.com.libproxy.lib.unc.edu/scholar?q=Information-seeking%20behavior%20of%20geoscientists
+LoadCap	1321244288031	http://scholar.google.com.libproxy.lib.unc.edu/scholar?q=Information-seeking%20behavior%20of%20geoscientists
+Show	1321244288075		http://scholar.google.com.libproxy.lib.unc.edu/scholar?q=Information-seeking%20behavior%20of%20geoscientists
+RClick	1321244291054	http://scholar.google.com.libproxy.lib.unc.edu/scholar?cluster=17046778840050780303&hl=en&as_sdt=0,34
+LoadCap	1321244292924	http://scholar.google.com.libproxy.lib.unc.edu/scholar?cluster=17046778840050780303&hl=en&as_sdt=0,34
+Show	1321244292941		http://scholar.google.com.libproxy.lib.unc.edu/scholar?cluster=17046778840050780303&hl=en&as_sdt=0,34
+LClick	1321244296364	http://www.sla.org.libproxy.lib.unc.edu/speciallibraries/issn00386723v80n3.pdf#page=33
+Blur	1321244296375
+Hide	1321244297101
+Focus	1321244297689		http://www.sla.org.libproxy.lib.unc.edu/speciallibraries/issn00386723v80n3.pdf#page=33
