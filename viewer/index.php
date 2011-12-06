@@ -6,12 +6,17 @@ include('./ActivityLogEvent.php');
 include('./ActivityLog.php');
 date_default_timezone_set('America/New_York'); 
 
-if (isset($_GET['test'])) {
-    $activityLog = new ActivityLog(file_get_contents('./testdata/activity.test'));
+$testFile = './testdata/activity.test';
+$dataFile = './data/lemurlogtoolbar_log';
+
+if (isset($_GET['person'])) {
+    $fileToLoad = $dataFile . '.' . $_GET['person'];
 }
 else {
-    $activityLog = new ActivityLog(file_get_contents('./data/lemurlogtoolbar_log'));
+    $fileToLoad = $testFile;
 }
+
+$activityLog = new ActivityLog(file_get_contents($fileToLoad));
 
 $serpCollection = new SerpCollection();
 $serpCollection->fillFromActivityLog($activityLog);

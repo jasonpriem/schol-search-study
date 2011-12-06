@@ -52,6 +52,7 @@ li.serp ul {
 }
 li.serp ul li {
     font-size: 12px;
+    word-wrap:break-word;
 }
 li.serp ul li a{
    color: #333;
