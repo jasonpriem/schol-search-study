@@ -1,0 +1,62 @@
+body {
+    background: #eee;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+li.serp {
+    list-style-type: none;
+}
+li.serp span.search-engine-name {
+    width: 95px;
+    float:left;
+    text-align:right;
+    padding: 3px 5px 0 0;
+    font-size:12px;
+    color: #bbb;
+}
+
+li.serp span.scholarly {
+    font-weight: bold;
+    color: #777;
+}
+
+li.serp span.date {
+    background: none repeat scroll 0 0 #777;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 11px;
+    margin: 0 5px;
+    padding: 1px 5px;
+    text-align: center;
+    width: 100px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px
+}
+li.serp p {
+    margin: 10px 0 0 0;
+}
+li.serp p span.link-info {
+    float: left;
+    width:800px;
+}
+
+li.serp ul {
+    margin-left: 100px;
+    padding: 0 0 0 15px;
+    clear:both;
+}
+li.serp ul li {
+    font-size: 12px;
+    word-wrap:break-word;
+}
+li.serp ul li a{
+   color: #333;
+}
+li.serp ul li a:hover {
+   color: blue;
+}

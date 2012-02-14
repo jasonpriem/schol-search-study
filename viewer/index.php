@@ -1,24 +1,32 @@
 <?php
-include('./Log.php');
-include('./SearchLog.php');
+include('./Serp.php');
+include('./SerpFactory.php');
+include('./SerpCollection.php');
+include('./ActivityLogEvent.php');
 include('./ActivityLog.php');
-include('./Search.php');
-include('./SearchParser.php');
 date_default_timezone_set('America/New_York'); 
-$searchParser = new SearchParser(file_get_contents('./data/search.test'));
-$search = new Search($searchParser);
 
-$activityLog = new ActivityLog(file_get_contents('./data/activity.test'));
-print_r($activityLog->getPageClicks());
+$testFile = './testdata/activity.test';
+$dataFile = './data/lemurlogtoolbar_log';
 
+if (isset($_GET['person'])) {
+    $fileToLoad = $dataFile . '.' . $_GET['person'];
+}
+else {
+    $fileToLoad = $testFile;
+}
 
-?>
-<h2>Okay, what's this thing need to be able to do?</h2>
-<pre>
-* open the page log
-* make an array of clicks on each page, keyed by url
-* open the search text file
-* make an array of searches
-* parse each search
-* print the thing
-</pre>
+$activityLog = new ActivityLog(file_get_contents($fileToLoad));
+
+$serpCollection = new SerpCollection();
+$serpCollection->fillFromActivityLog($activityLog);
+
+?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <title>log viewer</title>
+    </head>
+<h1>search pilot logs viewer</h1>
+<?php $serpCollection->renderAsUl(); ?>
