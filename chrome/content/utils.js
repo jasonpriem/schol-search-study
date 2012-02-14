@@ -125,24 +125,19 @@ function lemurlog_IsRecordableURL(url)
 ///////////////////////////////////////////////////////////////////////
 function lemurlog_SetButtons()
 {
-  try {
-    var button = document.getElementById("LogTB-Pause-Button");
-    button.collapsed = (!lemurlog_g_enable);
-    button.disabled = (!lemurlog_g_enable);
-
-    button = document.getElementById("LogTB-Pause-Button-Gray");
-    button.collapsed = lemurlog_g_enable;
-    button.disabled = true;
-
-    button = document.getElementById("LogTB-Start-Button");
-    button.collapsed = lemurlog_g_enable;
-    button.disabled = lemurlog_g_enable;
-
-    button = document.getElementById("LogTB-Start-Button-Gray");
-    button.collapsed = (!lemurlog_g_enable);
-    button.disabled = true;
-  } catch (ex) {
-  }
+    // turn toolbar red when recording (added by jason)
+    var toolbar = document.getElementById("LogTB-Toolbar");
+    var button = document.getElementById("LogTB-Record-Button");
+    
+    if (lemurlog_g_enable) {
+        toolbar.className = "chromeclass-toolbar active";
+        button.label = "Recording!";
+    }
+    else {
+        toolbar.className = "chromeclass-toolbar inactive";
+        button.label = "Record";
+    }
+    
 }
 
 

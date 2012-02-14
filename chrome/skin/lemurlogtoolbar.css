@@ -1,7 +1,14 @@
-
-#LogTB-Start-Button {
+#LogTB-Toolbar.active {
+    -moz-appearance: none;
+    background-color:red;
+}
+#LogTB-Toolbar.active #LogTB-Record-Button label {
+    -moz-appearance: none;
+    font-weight: bold;
+}
+#LogTB-Record-Button {
     list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
-  -moz-image-region: rect(48px 96px 64px 80px);  
+  -moz-image-region: rect(48px 80px 64px 64px);  
   -moz-box-orient: horizontal;
 
 }
@@ -11,7 +18,7 @@
   -moz-box-orient: horizontal;
 }
 
-#LogTB-Start-Button-Gray {
+#LogTB-Record-Button-Gray {
     list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu-gray.png");
   -moz-image-region: rect(48px 96px 64px 80px);  
   -moz-box-orient: horizontal;

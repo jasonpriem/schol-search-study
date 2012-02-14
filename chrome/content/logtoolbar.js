@@ -1,5 +1,5 @@
 //global variables
-var lemurlog_g_enable = true;
+var lemurlog_g_enable = false;
 var lemurlog_g_recordable = false;
 
 var lemurlog_scrollTop = 0;
@@ -351,7 +351,7 @@ function lemurlog_OnTabAdded_15(event)
 	lemurlog_WriteLogFile(lemurlog_LOG_FILE, "AddTab\t" + time + "\t" +
 		id + "\t" + url + "\t" + srcID + "\t" + lemurlogtoolbar_srcURL + "\n");
 
-    //lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "AddTab\t" + time + "\n");
+    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "AddTab\t" + time + "\n");
   }
 }
 
@@ -372,7 +372,7 @@ function lemurlog_OnTabRemoved_15(event)
   { 
     var time = new Date().getTime();
 	var id = browser.parentNode.id;
-//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "RmTab\t" + time + "\t" + id + "\n");
+    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "RmTab\t" + time + "\t" + id + "\n");
   }
 }
 
@@ -392,7 +392,7 @@ function lemurlog_OnTabSelected_15(event)
     var time = new Date().getTime();
     url=lemurlogtoolbar_washAndRinse(url, true);
 	var id = event.selectedTab.linkedBrowser.parentNode.id;
-//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "SelTab\t" + time + "\t" + id + "\t" + url + "\n");
+    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "SelTab\t" + time + "\t" + id + "\t" + url + "\n");
   }
 }
 
@@ -448,7 +448,7 @@ function lemurlog_OnTabAdded_20(event)
 
   lemurlog_WriteLogFile(lemurlog_LOG_FILE, "AddTab\t" + time + "\t" +
 	 id + "\t" + url + "\t" + srcID + "\t" + lemurlogtoolbar_srcURL + "\n");  
-  //lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "AddTab\t" + time + "\n");
+  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "AddTab\t" + time + "\n");
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -462,7 +462,7 @@ function lemurlog_OnTabRemoved_20(event)
   }
   var time = new Date().getTime();
   var id = event.target.linkedBrowser.parentNode.id;
-//  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "RmTab\t" + time + "\t" + id + "\n");
+  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "RmTab\t" + time + "\t" + id + "\n");
 }
 
 
@@ -487,7 +487,7 @@ function lemurlog_OnTabSelected_20(event)
     var time = new Date().getTime();
 	var id = browser.linkedBrowser.parentNode.id;
     url=lemurlogtoolbar_washAndRinse(url, true);
-//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "SelTab\t" + time + "\t" + id + "\t" + url + "\n");
+    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "SelTab\t" + time + "\t" + id + "\t" + url + "\n");
   }
 }
 
@@ -535,7 +535,7 @@ function lemurlog_OnFocus(event)
 	
     url=lemurlogtoolbar_washAndRinse(url, true);
 	var id = gBrowser.selectedBrowser.parentNode.id;
-//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Focus\t" + time + "\t" + id + "\t" + url + "\n");
+    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Focus\t" + time + "\t" + id + "\t" + url + "\n");
   }
 
 }
@@ -558,7 +558,7 @@ function lemurlog_OnBlur(event)
     return;
   }
   lemurlog_prev_blur_time = time;
-//  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Blur\t" + time + "\n");
+  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Blur\t" + time + "\n");
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -694,7 +694,7 @@ function lemurlog_OnShow(event)
   lemurlog_prev_show_time = time;
   url=lemurlogtoolbar_washAndRinse(url, true);
   var id = gBrowser.selectedBrowser.parentNode.id;
-//  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Show\t" + time + "\t" + id + "\t" + url + "\n");
+  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Show\t" + time + "\t" + id + "\t" + url + "\n");
 
 }
 
@@ -714,7 +714,7 @@ function lemurlog_OnHide(event)
     return;
   }
   lemurlog_prev_hide_time = time;
-//  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Hide\t" + time + "\n");
+  lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Hide\t" + time + "\n");
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -726,14 +726,16 @@ function lemurlog_Switch(event, mode)
   if (!lemurlogtoolbar_inPrivateBrowseMode) {
     var time = new Date().getTime();
     
-    lemurlog_g_enable = mode;
-    if(mode === true)
+    lemurlog_g_enable = !lemurlog_g_enable;
+    if(lemurlog_g_enable)
     {
       lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "StartLogging\t" + time + "\n");
     }
     else
     {
+      lemurlog_g_enable = true; // crazy hack to allow writing in log file.
       lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "PauseLogging\t" + time + "\n");
+      lemurlog_g_enable = false;
     }
     lemurlog_SetButtons();
   }
@@ -766,7 +768,7 @@ function lemurlog_OnLoad_Cap(event)
     }
     var time = new Date().getTime();
     var printableurl=lemurlogtoolbar_washAndRinse(url, true);
-//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadCap\t" + time + "\t" + printableurl + "\n");
+    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadCap\t" + time + "\t" + printableurl + "\n");
 
     //add mousedown listeners to all links
 	/*
@@ -831,7 +833,7 @@ function lemurlog_OnLoad_Bub(event)
   if(lemurlog_IsRecordableURL(url))
   {
     url=lemurlogtoolbar_washAndRinse(url, true);
-//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadBub\t" + time + "\t" + url + "\n");
+    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadBub\t" + time + "\t" + url + "\n");
   }
 
 }

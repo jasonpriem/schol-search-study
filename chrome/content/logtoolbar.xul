@@ -45,7 +45,7 @@
     
     
     
-<!--  <toolbox id="navigator-toolbox">
+<toolbox id="navigator-toolbox">
 
     <toolbar 
       id="LogTB-Toolbar" 
@@ -59,28 +59,10 @@
       <toolbaritem flex="0">
         <toolbarseparator />
         <toolbarbutton 
-          id="LogTB-Start-Button" 
-          tooltiptext="Start Logging"
-          label="Start" 
-          oncommand="lemurlog_Switch(event, true)"
-        />
-        <toolbarbutton 
-          id="LogTB-Start-Button-Gray" 
-          tooltiptext="Start Logging"
-          label="Start"
-          oncommand="lemurlog_Switch(event, true)"
-        />
-        <toolbarbutton 
-          id="LogTB-Pause-Button"
-          tooltiptext="Pause logging"
-          label="Pause" 
-          oncommand="lemurlog_Switch(event, false)" 
-        />
-        <toolbarbutton 
-          id="LogTB-Pause-Button-Gray" 
-          tooltiptext="Pause logging"
-          label="Pause" 
-          oncommand="lemurlog_Switch(event, false)" 
+          id="LogTB-Record-Button" 
+          tooltiptext="Start Recording your search"
+          label="Record" 
+          oncommand="lemurlog_Switch(event)"
         />
         <toolbarbutton
           id="LogTB-View-Button"
@@ -101,6 +83,7 @@
             />
           </menupopup>
         </toolbarbutton>
+        <!--
         <toolbarbutton 
           id="LogTB-Clear-Button" 
           tooltiptext="Clear all log files"
@@ -128,11 +111,12 @@
         <toolbarseparator 
             class="groove" 
         />
+        -->
 
       </toolbaritem>
       <toolbarspring />
     </toolbar>
-  </toolbox> -->
+  </toolbox>
   
 </overlay>
 
