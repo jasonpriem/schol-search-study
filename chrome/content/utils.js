@@ -125,6 +125,8 @@ function lemurlog_IsRecordableURL(url)
 ///////////////////////////////////////////////////////////////////////
 function lemurlog_SetButtons()
 {
+    /*
+     * this isn't needed since no toolbar in this version.
     // turn toolbar red when recording (added by jason)
     var toolbar = document.getElementById("LogTB-Toolbar");
     var button = document.getElementById("LogTB-Record-Button");
@@ -137,6 +139,7 @@ function lemurlog_SetButtons()
         toolbar.className = "chromeclass-toolbar inactive";
         button.label = "Record";
     }
+    */
     
 }
 
