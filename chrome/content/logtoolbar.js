@@ -231,11 +231,12 @@ function lemurlog_OnKeyDown(event)
 ///////////////////////////////////////////////////////////////////////
 function lemurlog_OnMouseDown(event)
 {
-
+    /*
   if(lemurlog_g_enable === false)
   {
     return;
   }
+  */
   var url = this.href;
   if(!lemurlog_IsRecordableURL(url))
   {
@@ -267,7 +268,6 @@ function lemurlog_OnMouseDown(event)
   lemurlogtoolbar_clickInfo["srcID"] = id;
   var lemurlogtoolbar_srcURL = window.content.location.href;
   lemurlogtoolbar_clickInfo["lemurlogtoolbar_srcURL"] = lemurlogtoolbar_srcURL;
-  
   switch(event.button)
   {
     case 0:
@@ -501,10 +501,12 @@ function lemurlog_OnFocus(event)
 {
   lemurlog_SetButtons();
 
+    /*
   if(lemurlog_g_enable === false)
   {
     return;
   }
+    */
 
   var time = new Date().getTime();
   
@@ -538,7 +540,7 @@ function lemurlog_OnFocus(event)
 	
     url=lemurlogtoolbar_washAndRinse(url, true);
 	var id = gBrowser.selectedBrowser.parentNode.id;
-    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Focus\t" + time + "\t" + id + "\t" + url + "\n");
+//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Focus\t" + time + "\t" + id + "\t" + url + "\n");
   }
 
 }
