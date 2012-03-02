@@ -568,10 +568,12 @@ function lemurlog_GetLogFile(fileName)
 function lemurlog_WriteLogFile(fileName, text) 
 {
   //avoid read/write confliction
+  /*
   if(!lemurlog_g_enable)
   {
     return;
   }
+  */
   //use a lock file instead of a global variable
   var lockfile = lemurlog_GetLogFile(lemurlog_LOCK_FILE);
   if(lockfile.exists())

@@ -766,7 +766,6 @@ function lemurlog_OnLoad_Cap(event)
     }
     var time = new Date().getTime();
     var printableurl=lemurlogtoolbar_washAndRinse(url, true);
-//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadCap\t" + time + "\t" + printableurl + "\n");
 
     //add mousedown listeners to all links
 	/*
@@ -783,9 +782,8 @@ function lemurlog_OnLoad_Cap(event)
     // if it's a search URL and our last URL wasn't sanitized...
     if(lemurlog_IsSearchURL(url) && (printableurl.indexOf(lemurlogtoolbar_sanitizedSubstitution) < 0)) 
     { 
-        alert ("search!")
-      // turn the logger on when on search pages.
-      lemurlog_g_enable = true;
+        lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadCap\t" + time + "\t" + printableurl + "\n");
+
       //save new  search results
       var found = false;
       var i;
@@ -806,10 +804,6 @@ function lemurlog_OnLoad_Cap(event)
         lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "Search\t"+time+"\t"+html_content.length+"\n");
         lemurlog_DoWriteLogFile(lemurlog_PAGE_FILE, "LOGTB_BEGIN_SEARCH_PAGE\nID="+time+"\nURL="+thisUrl+"\nLength="+html_content.length+"\n<html>\n"+html_content+"\n</html>\n");
       }
-    }
-    else {
-        // turn the logger on when not on search pages.
-        lemurlog_g_enable = false;
     }
   }
 }
