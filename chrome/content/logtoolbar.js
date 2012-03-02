@@ -750,11 +750,6 @@ function lemurlog_Switch(event, mode)
 ///////////////////////////////////////////////////////////////////////
 function lemurlog_OnLoad_Cap(event) 
 {
-  //log load events
-  if(lemurlog_g_enable === false)
-  {
-    return;
-  }
 
   if ((typeof(event.originalTarget)!="undefined") && (typeof(event.originalTarget.location)!="undefined")) {
     var url = event.originalTarget.location.href;
@@ -771,7 +766,7 @@ function lemurlog_OnLoad_Cap(event)
     }
     var time = new Date().getTime();
     var printableurl=lemurlogtoolbar_washAndRinse(url, true);
-    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadCap\t" + time + "\t" + printableurl + "\n");
+//    lemurlog_DoWriteLogFile(lemurlog_LOG_FILE, "LoadCap\t" + time + "\t" + printableurl + "\n");
 
     //add mousedown listeners to all links
 	/*
@@ -788,6 +783,7 @@ function lemurlog_OnLoad_Cap(event)
     // if it's a search URL and our last URL wasn't sanitized...
     if(lemurlog_IsSearchURL(url) && (printableurl.indexOf(lemurlogtoolbar_sanitizedSubstitution) < 0)) 
     { 
+        alert ("search!")
       // turn the logger on when on search pages.
       lemurlog_g_enable = true;
       //save new  search results
