@@ -1,10 +1,10 @@
 #LogTB-Toolbar.active {
-    -moz-appearance: none;
-    background-color:red;
+    -moz-appearance: none !important;
+    background-color:red  !important;
 }
 #LogTB-Toolbar.active #LogTB-Record-Button label {
-    -moz-appearance: none;
-    font-weight: bold;
+    -moz-appearance: none !important;
+    font-weight: bold  !important;
 }
 #LogTB-Record-Button {
     list-style-image: url("chrome://lemurlogtoolbar/skin/cutemenu.png");
