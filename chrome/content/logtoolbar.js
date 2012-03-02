@@ -130,9 +130,7 @@ function lemurlog_Help(event)
 // added by Jason Priem, 27 Sept. 2011
 ///////////////////////////////////////////////////////////////////////
 function lemurlog_Upvote(event) {
-    if (!lemurlog_g_enable) {
-        return false;
-    }
+
     var button = document.getElementById("LogTB-Upvote-Button");
     button.className = "clicked";
     button.label = "Saved.";
