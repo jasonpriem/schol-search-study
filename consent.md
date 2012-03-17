@@ -3,9 +3,7 @@ title: consent form
 layout: base
 ---
 
-**University of North Carolina-Chapel Hill**
-
-**Consent to Participate in a Research Study**
+#h1 University of North Carolina-Chapel Hill Consent to Participate in a Research Study
 
 **Adult Participants**
 
@@ -18,8 +16,6 @@ ____
 **IRB Study \#****12-0310**
 
 **Consent Form Version Date:** 2/22/2012**
-
-
 
 **Title of Study:**Potential for Personalization in Scientific
 Information Retrieval
