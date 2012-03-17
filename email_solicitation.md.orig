@@ -1,10 +1,15 @@
 ---
+<<<<<<< HEAD
 title: email solicitation
 layout: base
----
+=======
+layout: base
+title: email solicitation
+>>>>>>> 5f939ecccc0a30b37c1abd1df8c95c0fd98c28d6
+___
 
 #Transforming scholarly search with Mendeley: participants needed
-
+  
 Can scholarly searching be improved by utilizing information stored
 in your Mendeley library?
 

@@ -21,7 +21,7 @@ Collect qualitative data on how researchers organize their research
 publications using personal information management tools;
 
 Collect qualitative data on how users search for research
-publications using on-line search engines; and
+publications using on-line search engines; and 
 
 Investigate whether information derived from a researcher’s
 personal library of research publications can be used to
