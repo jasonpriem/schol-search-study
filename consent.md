@@ -41,7 +41,7 @@ ____
 
 
 
-**What are some general things you should know about research studies?**
+##What are some general things you should know about research studies?
 
 You are being asked to take part in a research study. To join the
 study is voluntary. You may refuse to join, or you may withdraw
@@ -68,7 +68,7 @@ them, any questions you have about this study at any time.
 
 
 
-**What is the purpose of this study?******
+##What is the purpose of this study?
 
 The purpose of this research study is to collect qualitative data
 on how you manage your personal library of research publications
@@ -90,7 +90,7 @@ on some days and less (or none) on other days.
 
 
 
-**Are there any reasons you should not be in this study?**
+##Are there any reasons you should not be in this study?
 
 You should not be in this study if younger than 18 years of age,
 not an active Mendeley user, or you do not expect to conduct at
@@ -98,14 +98,14 @@ least 100 academic searches in the next 4 weeks.
 
 
 
-**How many people will take part in this study?**
+##How many people will take part in this study?
 
 If you decide to be in this study, you will be one of approximately
 40 people in this study.
 
 
 
-**How long will your part in this study last?**
+##How long will your part in this study last?
 
 The study will run for a period of 5 weeks. Most of your active
 involvement will happen at the start and end of the study
@@ -113,7 +113,7 @@ involvement will happen at the start and end of the study
 
 
 
-**What will happen if you take part in the study?**
+##What will happen if you take part in the study?
 
 At the beginning of the study, you will be asked to (1) install a
 Mozilla Firefox plugin that will record your search interactions
@@ -160,7 +160,7 @@ that you recorded.
 
 
 
-**What are the possible benefits from being in this study?**
+##What are the possible benefits from being in this study?
 
 Research is designed to benefit society by gaining new knowledge.
 You may not benefit personally from being in this research study.
@@ -169,7 +169,7 @@ You may not benefit personally from being in this research study.
 
 
 
-**What are the possible risks or discomforts involved from being in this study?**
+##What are the possible risks or discomforts involved from being in this study?
 
 There are no anticipated risks associated with participation in
 this study. However, you should report any unforeseen problems to
@@ -177,7 +177,7 @@ the researcher.
 
 
 
-**How will your privacy be protected?**
+##How will your privacy be protected?
 
 Subject privacy and confidentiality will be maintained in several
 ways. All data produced by participants will be transferred using a
@@ -215,7 +215,7 @@ Check the line that best matches your choice:
 
 
 
-**Will you receive anything for being in this study?**
+##Will you receive anything for being in this study?
 
 You will be receiving $50.00 USD for taking part in this study.  
 If you decide to withdraw from the study for any reason, or if you
@@ -225,7 +225,7 @@ searches you completed out of 100.
 
 
 
-**Will it cost you anything to be in this study?**
+##Will it cost you anything to be in this study?
 
 There will be no costs for being in the study
 
@@ -233,7 +233,7 @@ There will be no costs for being in the study
 
 
 
-**What if you have questions about this study?**
+##What if you have questions about this study?
 
 You have the right to ask, and have answered, any questions you may
 have about this research. If you have questions, complaints,
@@ -246,7 +246,7 @@ contact the researchers listed on the first page of this form.
 
 
 
-**What if you have questions about your rights as a research participant?**
+##What if you have questions about your rights as a research participant?
 
 All research on human volunteers is reviewed by a committee that
 works to protect your rights and welfare. If you have questions or
@@ -257,7 +257,6 @@ IRB\_subjects@unc.edu.
 
 
 
-______
 ______
 
 
@@ -281,10 +280,10 @@ in this research study.
 
 
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\_\_\_\_\_\_\_\_\_\_\_\_
 
-Signature of Research Participant Date
+Signature of Research Participant and  Date
 
 
 
@@ -292,9 +291,6 @@ Signature of Research Participant Date
 
 Printed Name of Research Participant
 
-
-
-Page 4 of 4
 
 
 
