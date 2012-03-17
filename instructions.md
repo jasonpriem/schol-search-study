@@ -27,6 +27,7 @@ stuff goes here
 	* delete stuff from the logs
 	* see what search pages get recorded
 
+
 ### toolbar A
 
 * install url
@@ -45,8 +46,9 @@ stuff goes here
 
 ## step 4: submit toolbar data
 
-stuff goes here
-
+* get log and attach as file in email
+* uninstall toolbar
+* reactivate Google Instant
 
 
 ## step 5: do interview
