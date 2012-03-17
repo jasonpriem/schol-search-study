@@ -14,5 +14,3 @@ known issues
 ------------
 * can’t work for new Google interface b/c ajax-y interface doesn’t load new pages.
 * if users upvote a page that was located via search results, but it doesn’t have url that’s in the SERP, we can’t relate the two.
-
-Test
