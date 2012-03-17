@@ -3,7 +3,9 @@ title: instructions
 layout: base
 ---
 
-Everything each participant needs to do should be here.
+# Participant instructions
+
+*Everything each participant needs to do should be on this one page:*
 
 ## step 1: consent form
 
