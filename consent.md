@@ -1,3 +1,7 @@
+---
+title: This will be used as the title-tag of the page head
+---
+
 **University of North Carolina-Chapel Hill**
 
 **Consent to Participate in a Research Study**
