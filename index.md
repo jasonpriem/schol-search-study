@@ -1,3 +1,8 @@
+---
+title: index
+layout: base
+---
+
 #Index of pages
 
 * http://jasonpriem/github.com/schol-search-study/consent.html
