@@ -1,6 +1,12 @@
 ---
 consent form
 ---
+<style type="text/css">
+body{
+  width: 600px;
+  margin: 0 auto;
+  }
+</style>
 
 **University of North Carolina-Chapel Hill**
 
