@@ -50,8 +50,9 @@ stuff goes here
 * uninstall toolbar
 * reactivate Google Instant
 
+## step 5: questionnaire
 
-## step 5: do interview
+## step 6: do interview
 
 stuff goes here
 
