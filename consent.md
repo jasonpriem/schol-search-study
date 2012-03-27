@@ -270,22 +270,11 @@ Information Retrieval
 
 
 
-I have read the information provided above. I have asked all the
-questions I have at this time. I voluntarily agree to participate
-in this research study.
+If you have read the information provided above, asked all the
+questions you have at this time, and voluntarily agree to participate
+in this research study, please <a href="mailto:jp@jasonpriem.org?subject=I agree to participate in the study">send us an email stating this.</a>
 
 
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-\_\_\_\_\_\_\_\_\_\_\_\_
-
-Signature of Research Participant and  Date
-
-
-
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-Printed Name of Research Participant
 
 
 
