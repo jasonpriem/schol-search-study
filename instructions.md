@@ -12,7 +12,7 @@ Before you can participate in the study, we need you to read and agree to the [c
 
 ## step 2: allow mendeley access
 
-not sure what goes here.
+Click on this link to [allow access to your Mendeley account](http://152.2.81.210/test-app/register/register.jsp). Follow the instructions listed there. When you're done, [email us](mailto:mendeley-study@email.unc.edu) your Mendeley username.
 
 ## step 3: install toolbar
 
@@ -80,7 +80,11 @@ Once your time in the study is up, we'll send you an email letting you know. You
 1. To turn Google Instant back on, follow the same steps as you did to turn it off, but unselect "Never show instant results." 
 
 
-## step 6: do interview
+## step 6: do survey
+
+Follow the link to fill out the one-page [post-study survey](https://unc.qualtrics.com/SE/?SID=SV_86uB6V1UHZ8bFkM&Preview=Survey&BrandID=unc).
+
+## step 7: do interview
 
 not sure what goes here.
 
