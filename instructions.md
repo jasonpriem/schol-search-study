@@ -12,7 +12,7 @@ Before you can participate in the study, we need you to read and agree to the [c
 
 ## step 2: allow mendeley access
 
-Click on this link to [allow access to your Mendeley account](http://152.2.81.210/test-app/register/register.jsp). Follow the instructions listed there. When you're done, [email us](mailto:mendeley-study@email.unc.edu) your Mendeley username.
+We'll send you an email with instructions on how to grant us access to your mendeley library.
 
 ## step 3: install toolbar
 
