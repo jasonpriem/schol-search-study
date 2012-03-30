@@ -5,6 +5,9 @@ layout: base
 
 # Participant instructions
 
+## step 0: primary search tool
+
+email us with an answer to this question: "is Google Scholar the primary tool you use for scholarly searches?"
 
 ## step 1: consent form
 
