@@ -16,7 +16,7 @@ Click on this link to [allow access to your Mendeley account](http://152.2.81.21
 
 ## step 3: install toolbar
 
-There are a few steps to installing the toolbar. First, turn off Google Instant (the toolbar can't parse Intant results):
+First, turn off Google Instant (the toolbar can't parse Instant results):
 
 1. Go to <http://www.google.com>.
 1. Search for something (doesn't matter what)
