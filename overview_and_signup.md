@@ -84,9 +84,7 @@ Arguello
 
 ## Sign-Up
 
-To participate, please send an email to
-[mendeleystudy@email.unc.edu](mailto:mendeley-study@email.unc.edu). We
-will follow up with instructions on how to proceed.
+To participate, just start with [step one here](http://jasonpriem.github.com/schol-search-study/instructions.html).
 
 
 
