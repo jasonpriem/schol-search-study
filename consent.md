@@ -272,7 +272,7 @@ Information Retrieval
 
 If you have read the information provided above, asked all the
 questions you have at this time, and voluntarily agree to participate
-in this research study, please <a href="mailto:jp@jasonpriem.org?subject=I agree to participate in the study">send us an email stating this.</a>
+in this research study, please <a href="mailto:priem@email.unc.edu?subject=[schol search q2] I agree to participate in the study">send us an email stating this.</a>
 
 
 
