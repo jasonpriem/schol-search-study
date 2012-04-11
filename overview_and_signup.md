@@ -84,7 +84,7 @@ Arguello
 
 ## Sign-Up
 
-To participate, just start with [step one here](http://jasonpriem.github.com/schol-search-study/instructions.html).
+To participate, just follow the steps on the [study instructions page.](http://jasonpriem.github.com/schol-search-study/instructions.html).
 
 
 
