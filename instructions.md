@@ -7,9 +7,7 @@ layout: base
 
 ## step 1: primary search tool
 
-<a href="mailto:priem@email.unc.edu?subject=[schol-search q1]">Email us</a> with
-
-a yes/no answer to this question: "is Google Scholar the primary tool you use for scholarly searches?"
+<a href="mailto:priem@email.unc.edu">Email us</a> with a yes/no answer to this question: "is Google Scholar the primary tool you use for scholarly searches?"
 
 ## step 2: consent form
 
