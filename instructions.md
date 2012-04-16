@@ -17,7 +17,8 @@ Next, you'll read the [consent form](http://jasonpriem.github.com/schol-search-s
 
 We'll send you an email with instructions on how to grant us access to your mendeley library.
 
-----
+
+
 ----
 
 If you have questions, email jp@jasonprierm.org
