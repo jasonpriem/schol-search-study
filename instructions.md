@@ -11,7 +11,7 @@ Email us a yes/no answer to this question: "is Google Scholar the primary tool y
 
 ## step 2: complete consent form
 
-Next, you'll read the [consent form](http://jasonpriem.github.com/schol-search-study/consent.html). There's a link on the form to email us with your consent.
+Next, you'll read the [consent form](http://jasonpriem.github.com/schol-search-study/consent.html). There's a link on the form to email us with your consent. After we receive your email consent we will follow-up with you.
 
 ## step 3: allow mendeley access
 
