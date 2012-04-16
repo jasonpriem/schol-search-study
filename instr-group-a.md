@@ -12,7 +12,7 @@ Second, install the toolbar that will track your searches:
 1. Click this link to [download the toolbar](https://github.com/jasonpriem/schol-search-study/raw/master/lemurlogtoolbar.xpi). Save it somewhere handy on your machine.
 1. Drag the lemurlogtoolbar.xpi file you just downloaded onto an active Firefox window, and click "install now" on the dialog that pops up.
 
-## step 5: use the toolbar
+## step 5: Use the toolbar
 
 
 ### What it does
