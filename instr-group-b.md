@@ -1,4 +1,3 @@
-
 ## step 4: install toolbar
 
 First, turn off Google Instant (the toolbar can't parse Instant results):
@@ -44,7 +43,7 @@ Once your time in the study is up, we'll send you an email letting you know. You
 
 ## step 7: do survey
 
-Follow the link to fill out the one-page [post-study survey](https://unc.qualtrics.com/SE/?SID=SV_86uB6V1UHZ8bFkM&Preview=Survey&BrandID=unc).
+Follow the link to fill out the one-page [post-study survey](https://unc.qualtrics.com/SE/?SID=SV_dmnxCyws525Rogc).
 
 ## step 8: do interview
 
