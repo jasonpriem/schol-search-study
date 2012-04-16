@@ -3,7 +3,7 @@ title: instructions
 layout: base
 ---
 
-# Participant instructions
+# UNC scholarly search study: Participant instructions
 
 ## step 1: primary search tool
 
@@ -16,6 +16,8 @@ Next, you'll read the [consent form](http://jasonpriem.github.com/schol-search-s
 ## step 3: allow mendeley access
 
 We'll send you an email with instructions on how to grant us access to your mendeley library.
+
+If you have questions, email jp@jasonprierm.org
 
 
 
