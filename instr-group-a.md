@@ -46,7 +46,7 @@ Once your time in the study is up, we'll send you an email letting you know. You
 
 ## Step 7: Do survey
 
-Follow the link to fill out the one-page [post-study survey](https://unc.qualtrics.com/SE/?SID=SV_86uB6V1UHZ8bFkM&Preview=Survey&BrandID=unc).
+Follow the link to fill out the one-page [post-study survey](https://unc.qualtrics.com/SE/?SID=SV_dmnxCyws525Rogc).
 
 ## step 8: Do interview
 
