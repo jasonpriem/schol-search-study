@@ -1,4 +1,9 @@
-# UNC scholarly search study: Participant instructions, group A
+---
+title: instructions 2, group A
+layout: base
+---
+
+# UNC scholarly search study: Participant instructions page 2, group A
 
 ## step 4: Install toolbar
 
