@@ -1,3 +1,10 @@
+---
+title: instructions 2, group B
+layout: base
+---
+
+# UNC scholarly search study: Participant instructions page 2, group B
+
 ## step 4: install toolbar
 
 First, turn off Google Instant (the toolbar can't parse Instant results):
