@@ -80,7 +80,7 @@ Institutional Review Board for Social and Behavioral Research.
 
 If you have any comments or questions, please contact Dr. Jaime
 Arguello
-([jarguell@email.unc.edu](mailto:jarguell@email.unc.edu)).
+([priem@email.unc.edu](mailto:priem@email.unc.edu)).
 
 ## Sign-Up
 
