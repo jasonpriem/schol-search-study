@@ -14,7 +14,7 @@ First, turn off Google Instant (the toolbar can't parse Instant results):
 1. Click the gear icon in at the top-right of the screen and select "Search settings."
 1. Under "Google Instant predictions," select "Never show Instant results."
 
-Second, install the toolbar that will track your searches:
+Second, install the toolbar that will track your searches (you'll uninstall this with one click after the study):
 
 1. Click this link to [download the toolbar](https://github.com/jasonpriem/schol-search-study/raw/master/lemurlogtoolbar.xpi). Save it somewhere handy on your machine.
 1. Drag the lemurlogtoolbar.xpi file you just downloaded onto an active Firefox window, and click "install now" on the dialog that pops up.
