@@ -21,7 +21,7 @@ We'll send you an email with instructions on how to grant us access to your mend
 
 ----
 
-If you have questions, email jp@jasonprierm.org
+If you have questions, email Jason Priem at priem@email.unc.edu
 
 
 
