@@ -59,6 +59,6 @@ We may contact you to do a brief interview.
 ----
 If you have questions, email Jason Priem at <a href="mailto:priem@email.unc.edu?subject=[schol-search question]">priem@email.unc.edu</a>
 
-[Back to instructions, page 1](http://jasonpriem.github.com/schol-search-study/instructions.html)
+[Back to instructions page 1](http://jasonpriem.github.com/schol-search-study/instructions.html)
 
 
