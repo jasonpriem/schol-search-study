@@ -21,7 +21,7 @@ We'll send you an email with instructions on how to grant us access to your mend
 
 ----
 
-If you have questions, email Jason Priem at priem@email.unc.edu
+If you have questions, email Jason Priem at <a href="mailto:priem@email.unc.edu?subject=[schol-search question]">priem@email.unc.edu</a>
 
 [back to the overview](http://jasonpriem.github.com/schol-search-study/overview_and_signup.html)
 
